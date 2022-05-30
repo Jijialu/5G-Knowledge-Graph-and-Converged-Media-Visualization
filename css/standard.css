@@ -1,0 +1,95 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    background: url(../img/standard-min.png);
+    background-attachment: fixed;
+    background-color: #1c4464;
+    text-align: center;
+}
+
+#paper{
+    z-index: -1;
+    height:300%;
+    width:100%;
+    top:0;
+    left:0;
+    position: absolute;
+}
+
+
+/* header */
+.head{
+    padding: 0px;
+    /* width: 98.5%; */
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+.titleText{
+    font-size: 30px;
+    float:left;
+    margin:30px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+#h1{
+    margin-top: 80px;
+    margin-bottom: 15px;
+}
+
+#mainContent{
+    margin-top: 70px;
+}
+
+/* box-card左 */
+#card{
+    width: 1000px;
+    margin:0 auto;
+}
+.el-card__body{
+    padding-top: 0px;
+}
+#cardL,#cardR{
+    float: left;
+    margin-left: 5%;
+    width: 400px;
+    height: 420px;
+    margin-bottom: 20px;
+}
+.text {
+    font-size: 14px;
+    text-align:left;
+    white-space: pre-wrap;   /*文本换行*/
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+}
+.clearfix:after {
+    clear: both
+}
+
+
+/* box-card右 */
+.image {
+    width: 100%;
+    display: block;
+}
+
+/* icon */
+.el-icon-s-promotion{
+    color: #eee;
+    font-size: 14px;
+}
+.backtopIcon{
+    background-color: #545c64;
+}
+.el-icon-caret-top{
+    color: #ffd04b;
+}

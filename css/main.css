@@ -1,0 +1,76 @@
+*{
+    padding:0;
+    margin:0;
+}
+html {
+    width:100vw;
+    overflow-x:hidden;
+}
+.gif
+{
+    position: absolute;  
+    left:0;  
+    top:0;  
+    width:100%;
+    height: 4227px;
+    text-align:center;  
+    background-color:#1c4464;
+    z-index:9999;
+}
+body{
+    text-align: center;
+    background-color: #1c4464;
+}
+#app{
+    background: url(../img/bg-min.png);
+    background-size:100%;
+    font-size: 0;
+    height: 4227px;
+    overflow-x: hidden;
+}
+
+/* header */
+.head{
+    padding: 0px;
+    /* width: 98.5%; */
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.titleText{
+    font-size: 30px;
+    float:left;
+    margin:30px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+/* footer */
+.footer{
+    margin-bottom: 0px;
+    background-color: rgb(59, 59, 59);
+}
+#div1,#div2,#div3 {
+    float: left;
+    margin-left: 2.5%;
+    width: 30%;
+    height: 120px;  
+}
+
+/* icon */
+.el-icon-s-promotion{
+    color: #eee;
+    font-size: 14px;
+}
+.backtopIcon{
+    background-color: #545c64;
+}
+.el-icon-caret-top{
+    color: #ffd04b;
+}
+
+/* 图片 */
+.el-image{
+    width:100%
+}
