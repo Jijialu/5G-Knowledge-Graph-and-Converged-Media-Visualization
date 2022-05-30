@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- DNS预解析缓存进行网站性能优化 -->
+        <link href="//59.110.216.95/cloud" rel=”dns-prefetch” />
+        <link href="http://59.110.216.95/cloud" rel=”prefetch” />
+        <!-- animate.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!-- Element样式 -->
+        <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+        <!-- css样式文件 -->
+        <link rel="stylesheet" href="./css/cloud.css">
+        <title>词云图</title>
+    </head>
+    <body>
+        <div id="vedios">
+            <el-container class="mainContainer">
+                <!-- 首部导航栏 -->
+                <el-header class="head">                    
+                    <div class="title" background-color=rgba(0,0,0,0)>
+                        <a href="index.html"><span class="titleText" style="margin-left: 800px;">5G知识图谱与融媒体可视化</span></a>
+                    </div>
+                </el-header>
+                
+                <el-main style="text-align: center;">
+                    
+                    <!-- <div v-for="i in count" style="width: 800px; margin-bottom: 70px; background-color: white;" class="animate__animated animate__bounce" >
+                        <div id="div1" style="font-size:30px; margin-top: 100px; margin-left: 200px;" >{{ title[i-1] }}</div>
+                        <el-image id="div2" :src="cloudUrl[i-1]" style="height:600px; width: 450px;" :fit="fits[1]"></el-image>
+                        <el-link type="primary" style="margin-left: 1100px;" :href="pdfUrl[i-1]">查看详情<i class="el-icon-caret-right"></i></el-link>
+                    </div> -->
+                    
+                    <div class="animate__animated animate__fadeIn" id="card" v-for="item in count">
+                        <!-- 右 -->
+                        <el-card class="box-card" id="cardR" style="background-color: rgb(255, 255, 255,0.8);">
+                            <div slot="header" class="clearfix">
+                                <span style="font-size: 30px;">{{ title[item-1] }}</span>
+                            </div>
+                            <a :href="pdfUrl[item-1]"><img :src="cloudUrl[item-1]" class="image"></a>
+                        </el-card>
+                    </div>
+                </el-main>
+            </el-container>
+            
+            <el-backtop class="backtopIcon"  style="margin-right: 0px; margin-bottom: 80px;"><i class="el-icon-caret-top"></i></el-backtop>
+            
+        </div>
+        
+        <!-- Vue -->
+        <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+        <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+        <!-- Element组件库 -->
+        <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+        <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/index.min.js"></script>
+        
+        <!-- Js组件 -->
+        <script src="./js/cloud.js"></script>
+    </body>
+</html>

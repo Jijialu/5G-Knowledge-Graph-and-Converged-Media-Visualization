@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- DNS预解析缓存进行网站性能优化 -->
+        <link href="//59.110.216.95/standard.html" rel=”dns-prefetch” />
+        <link href="http://59.110.216.95/standard.html" rel=”prefetch” />
+        <!-- animate.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!-- Element样式 -->
+        <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+        <!-- css样式文件 -->
+        <link rel="stylesheet" href="./css/standard.css">
+
+        <!-- eCharts图引入 -->
+        <!-- <script src="./js/echarts.min.js"></script> -->
+        <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.0.2/echarts.min.js"></script>
+        <!-- <script src="./js/jquery-3.5.1.min.js"></script> -->
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./js/dataTool.min.js"></script>
+        <title>5G相关标准</title>
+    </head>
+    <body>
+        <div id="standard" class="standard">
+            <el-container class="mainContainer">
+                <!-- 首部导航栏 -->
+                <el-header class="head">                    
+                    <div class="title" background-color=rgba(0,0,0,0)>
+                        <a href="index.html"><span class="titleText" style="margin-left: 800px;">5G知识图谱与融媒体可视化</span></a>
+                    </div>
+                </el-header>
+                
+                <el-main id="mainContent">                        
+                    <div class="animate__animated animate__fadeIn" id="card" v-for="item in newsNumber">
+
+                        <!-- 左 -->                        
+                        <el-card :body-style="{ padding: '0px' }" id="cardL" style="background-color: rgb(255, 255, 255,0.8);">                            
+                            <img :src="image[item-1]" class="image">
+                            <div class="text" style="padding: 20px;">
+                                <span>{{imageContent[item-1]}}</span>
+                            </div>                        
+                        </el-card>
+
+                        <!-- 右 -->
+                        <el-card class="box-card" id="cardR" style="background-color: rgb(255, 255, 255,0.8);">
+                            <div slot="header" class="clearfix">
+                                <span>{{ title[item-1] }}</span>
+                            </div>
+                            <div class="text" style="padding: 0px; margin: 0px;">
+                                {{ content[item-1] }}
+                            </div>
+                        </el-card>
+                    </div>
+                </el-main>
+                
+            </el-container>
+
+            <el-backtop class="backtopIcon" style="margin-right: 10px; margin-bottom: 50px;"><i class="el-icon-caret-top"></i></el-backtop>
+            
+        </div>
+
+        <!-- Vue -->
+        <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+        <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+        <!-- Element组件库 -->
+        <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+        <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/index.min.js"></script>
+        
+        <!-- Js组件 -->
+        <script src="./js/standard.js"></script>
+        <script type="text/javascript" src="./js/LineAndPie.js"></script>
+    </body>
+</html>

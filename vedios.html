@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- DNS预解析缓存进行网站性能优化 -->
+        <link href="//59.110.216.95/vedios.html" rel=”dns-prefetch” />
+        <link href="http://59.110.216.95/vedios.html" rel=”prefetch” />
+        <!-- animate.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!-- Element样式 -->
+        <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+        <!-- css样式文件 -->
+        <link rel="stylesheet" href="./css/vedios.css">
+        <title>视频</title>
+    </head>
+    <body>
+        <div id="vedios">
+            <el-container class="mainContainer">
+                <!-- 首部导航栏 -->
+                <el-header class="head">                    
+                    <div class="title" background-color=rgba(0,0,0,0)>
+                        <a href="index.html"><span class="titleText" style="margin-left: 800px;">5G知识图谱与融媒体可视化</span></a>
+                    </div>
+                </el-header>
+                
+                <el-main style="text-align: center; margin-top: 40px;">
+                    <video class="animate__animated animate__zoomIn" v-for="i in count" style="height: 500px; margin: 10px;" controls>
+                        <source :src="vediosUrl[i-1]" type="video/mp4">
+                    </video>
+                </el-main>
+            </el-container>
+            
+            <el-backtop class="backtopIcon" style="margin-right: 10px; margin-bottom: 50px;"><i class="el-icon-caret-top"></i></el-backtop>
+            
+        </div>
+        
+        <!-- Vue -->
+        <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
+        <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+        <!-- Element组件库 -->
+        <!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+        <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/index.min.js"></script>
+        
+        <!-- Js组件 -->
+        <script src="./js/vedios.js"></script>
+    </body>
+</html>
